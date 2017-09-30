@@ -1,8 +1,19 @@
 header {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2vh;
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px ridge darkgrey;
-  
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2vh;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px ridge darkgrey;
+
+  > div {
+    padding-right: 1vw;
+
+    img{
+      height: 4vh;
+    }
+  }
+
+  .instrumentLink{
+    line-height: 4vh;
+  }
 }
