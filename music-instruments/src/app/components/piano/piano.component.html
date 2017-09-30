@@ -1,3 +1,13 @@
 <div class='main'>
-  Piano
+  <div class=piano-container>
+    <ul>
+      <li class="piano-key" *ngFor="let pianoKey of pianoKeys; let i = index">
+        <div class=key>
+          {{pianoKey.id}}
+        </div>
+        <!-- <img [src]="image" /> -->
+        <!-- <span class="delete"> <img (click) = 'deleteImage(i)' src="http://www.clker.com/cliparts/e/0/f/4/12428125621652493290X_mark_18x18_02.svg.hi.png"/></span> -->
+      </li>
+    </ul>
+  </div>
 </div>

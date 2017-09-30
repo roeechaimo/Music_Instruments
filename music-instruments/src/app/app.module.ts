@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PianoComponent } from './components/piano/piano.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }

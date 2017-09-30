@@ -8,12 +8,21 @@ header {
   > div {
     padding-right: 1vw;
 
-    img{
+    a {
+      padding: 1vh;
+    }
+
+    img {
       height: 4vh;
     }
   }
 
-  .instrumentLink{
+  .instrumentLink {
     line-height: 4vh;
+  }
+
+  .active-link {
+    border: 1px solid $active-link-color;
+    border-radius: 10%;
   }
 }

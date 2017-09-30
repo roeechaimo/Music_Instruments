@@ -1,0 +1,53 @@
+{
+  "piano-keys": [
+    {
+      "id": 0,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    },
+    {
+      "id": 1,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    },
+    {
+      "id": 2,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    },
+    {
+      "id": 3,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    },
+    {
+      "id": 4,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    },
+    {
+      "id": 5,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "",
+      "audio-link": ""
+    }
+  ]
+
+}
