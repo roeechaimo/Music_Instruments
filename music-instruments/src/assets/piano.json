@@ -7,7 +7,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": "assets/audio/piano/zapsplat_musical_harmonica_single_001.mp3"
     },
     {
       "id": 1,
@@ -16,7 +16,7 @@
       "width": "",
       "color": "#080f0c",
       "class": "small",
-      "audio-link": ""
+      "audioLink": "assets/audio/piano/zapsplat_musical_harmonica_single_002.mp3"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": "assets/audio/piano/zapsplat_musical_harmonica_single_003.mp3"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "width": "",
       "color": "#080f0c",
       "class": "small",
-      "audio-link": ""
+      "audioLink": "assets/audio/piano/zapsplat_musical_harmonica_single_004.mp3"
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": ""
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": ""
     },
     {
       "id": 6,
@@ -61,7 +61,7 @@
       "width": "",
       "color": "#080f0c",
       "class": "small",
-      "audio-link": ""
+      "audioLink": ""
     },
     {
       "id": 7,
@@ -70,7 +70,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": ""
     },
     {
       "id": 8,
@@ -79,7 +79,7 @@
       "width": "",
       "color": "#080f0c",
       "class": "small",
-      "audio-link": ""
+      "audioLink": ""
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "width": "",
       "color": "#F8F8FF",
       "class": "big",
-      "audio-link": ""
+      "audioLink": ""
     }
   ]
 
