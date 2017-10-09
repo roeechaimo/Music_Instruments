@@ -16,9 +16,9 @@ export class PianoComponent implements OnInit {
 
   pianoKeys = [];
 
-  playNote(index) {    
+  playNote(index) {
     this.audio = new Audio();
-    this.audio.src = '../' + this.pianoKeys[index].audioLink;
+    this.audio.src = this.pianoKeys[index].audioLink;
     this.audio.play();
   }
 
