@@ -5,7 +5,8 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#F8F8FF",
+      "class": "big",
       "audio-link": ""
     },
     {
@@ -13,7 +14,8 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#080f0c",
+      "class": "small",
       "audio-link": ""
     },
     {
@@ -21,7 +23,8 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#F8F8FF",
+      "class": "big",
       "audio-link": ""
     },
     {
@@ -29,7 +32,8 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#080f0c",
+      "class": "small",
       "audio-link": ""
     },
     {
@@ -37,7 +41,8 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#F8F8FF",
+      "class": "big",
       "audio-link": ""
     },
     {
@@ -45,7 +50,44 @@
       "instrument": "piano",
       "height": "",
       "width": "",
-      "color": "",
+      "color": "#F8F8FF",
+      "class": "big",
+      "audio-link": ""
+    },
+    {
+      "id": 6,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "#080f0c",
+      "class": "small",
+      "audio-link": ""
+    },
+    {
+      "id": 7,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "big",
+      "audio-link": ""
+    },
+    {
+      "id": 8,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "#080f0c",
+      "class": "small",
+      "audio-link": ""
+    },
+    {
+      "id": 9,
+      "instrument": "piano",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "big",
       "audio-link": ""
     }
   ]

@@ -18,7 +18,7 @@ export class PianoComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('../../assets/piano.json').subscribe(data => {
       this.results = data['piano-keys'];
-      this.pianoKeys = this.results;            
+      this.pianoKeys = this.results;
     });
   }
 }

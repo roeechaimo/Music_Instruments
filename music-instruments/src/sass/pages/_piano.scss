@@ -2,9 +2,26 @@
   ul {
     display: flex;
     list-style: none;
+    padding: 0;
 
     li {
-      margin: 2vh;
+      .key {
+        @include hover-instrument;
+        border: 1px solid $key-border-color;
+        box-shadow: 0.5vh 0.5vh 0.2vh $shadow;
+      }
+
+      .big {
+        height: 30vh;
+        width: 8vh;
+        background-color: $key-color-big;
+      }
+
+      .small {
+        height: 20vh;
+        width: 4vh;
+        background-color: $key-color-small;
+      }
     }
   }
 }

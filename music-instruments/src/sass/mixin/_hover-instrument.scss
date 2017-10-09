@@ -1,0 +1,8 @@
+@mixin hover-instrument {
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1.1vh 1.1vh 0.6vh $shadow;
+  }
+}

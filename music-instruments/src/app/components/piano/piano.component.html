@@ -2,7 +2,7 @@
   <div class=piano-container>
     <ul>
       <li class="piano-key" *ngFor="let pianoKey of pianoKeys; let i = index">
-        <div class=key>
+        <div class="key" [ngClass]="{'big': pianoKey.class === 'big', 'small': pianoKey.class === 'small'}">
           {{pianoKey.id}}
         </div>
         <!-- <img [src]="image" /> -->
