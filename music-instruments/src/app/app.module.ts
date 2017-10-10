@@ -5,17 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { AppComponent } from './app.component';
-import { PianoComponent } from './components/piano/piano.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
-  { path: 'piano', component: PianoComponent },
+  { path: 'accordion', component: AccordionComponent },
   { path: 'guitar', component: GuitarComponent },
   {
     path: '',
-    redirectTo: '/piano',
+    redirectTo: '/accordion',
     pathMatch: 'full'
   }
 ];
@@ -23,7 +23,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PianoComponent,
+    AccordionComponent,
     GuitarComponent,
     HeaderComponent,
     FooterComponent
