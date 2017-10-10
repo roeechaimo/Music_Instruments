@@ -2,7 +2,8 @@
   <div class="accordion-container">
     <ul>
       <li class="accordion-key" *ngFor="let accordionKey of accordionKeys; let i = index">
-        <div class="key" [ngClass]="{'big': accordionKey.class === 'big', 'small': accordionKey.class === 'small'}" (click) = "playNote(i)">
+        <div class="key" [ngClass]="{'big': accordionKey.class === 'big', 'small': accordionKey.class === 'small'}"
+         (click) = "playNote(i)" [@onOffTrigger] = "triggerStateName">
           {{accordionKey.id}}
         </div>
         <!-- <img [src]="image" /> -->
