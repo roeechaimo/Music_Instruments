@@ -3,11 +3,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export const ON_OFF_ANIMATION =
   trigger('onOffTrigger', [
     state('off', style({
-      transform: 'scale(1)'
+      transform: 'box-shadow(0.5vh 0.5vh 0.2vh #888888)'
     })),
     state('on', style({
-      transform: 'scale(0.9)'
+      transform: 'box-shadow(0.2vh 0.2vh 0.1vh #888888)'
     })),
-    transition('off => on', animate('.2s 100ms ease-in')),
-    transition('on => off', animate('.2s 100ms ease-out'))
+    transition('off => on', animate('.1s 100ms')),
+    transition('on => off', animate('.1s 100ms'))
   ]);
