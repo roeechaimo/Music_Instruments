@@ -5,6 +5,9 @@
     padding: 0;
 
     li {
+      text-align: center;
+      font-size: $text-size-key;
+
       .key {
         @include hover-instrument;
         border: 1px solid $key-border-color;

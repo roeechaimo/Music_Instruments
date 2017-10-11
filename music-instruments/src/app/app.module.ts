@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { GuitarComponent } from './components/guitar/guitar.component';

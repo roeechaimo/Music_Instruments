@@ -3,11 +3,10 @@
     <ul>
       <li class="accordion-key" *ngFor="let accordionKey of accordionKeys; let i = index">
         <div class="key" [ngClass]="{'big': accordionKey.class === 'big', 'small': accordionKey.class === 'small'}"
-        (click)="playNote(i)" [@onOffTrigger]="accordionKey.state">
-          {{accordionKey.id}}
+         (click)="playNote(i)" [@onOffTrigger]="accordionKey.state">
+
         </div>
-        <!-- <img [src]="image" /> -->
-        <!-- <span class="delete"> <img (click) = 'deleteImage(i)' src="http://www.clker.com/cliparts/e/0/f/4/12428125621652493290X_mark_18x18_02.svg.hi.png"/></span> -->
+        {{accordionKey.keyboard.toUpperCase()}}
       </li>
     </ul>
   </div>
