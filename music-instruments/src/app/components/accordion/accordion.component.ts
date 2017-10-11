@@ -19,7 +19,7 @@ export class AccordionComponent implements OnInit {
 
   accordionKeys = [];
 
-  playNote(index) {    
+  playNote(index) {       
     this.accordionKeys[index].state = this.accordionKeys[index].state === 'on' ? 'off' : 'on';
     this.audio = new Audio();
     this.audio.src = this.accordionKeys[index].audioLink;
