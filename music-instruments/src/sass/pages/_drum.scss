@@ -1,0 +1,34 @@
+.drum-container {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      text-align: center;
+      font-size: $text-size-key;
+      margin: 1vh;
+
+      .key {
+        @include hover-instrument;
+        border: 1px solid $key-border-color;
+        box-shadow: 0.5vh 0.5vh 0.2vh $shadow;
+        height: 30vh;
+        width: 8vh;
+        background-color: $key-color-big;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .screw {
+          border: 1px solid $key-border-color;
+          height: 1vh;
+          width: 1vh;
+          border-radius: 50%;
+          background-color: $key-border-color;
+        }
+      }
+    }
+  }
+}

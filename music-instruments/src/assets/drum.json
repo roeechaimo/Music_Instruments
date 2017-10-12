@@ -1,0 +1,48 @@
+{
+  "drum-keys": [{
+      "id": 0,
+      "instrument": "drum",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "kick",
+      "state": "off",
+      "keyboard": "a",
+      "audioLink": "../assets/audio/drum/musical_human_beatbox_kick_drum.mp3"
+    },
+    {
+      "id": 1,
+      "instrument": "drum",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "closed-hi-hat",
+      "state": "off",
+      "keyboard": "s",
+      "audioLink": "../assets/audio/drum/musical_human_beatbox_closed_hi_hat.mp3"
+    },
+    {
+      "id": 2,
+      "instrument": "drum",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "open-hi-hat",
+      "state": "off",
+      "keyboard": "d",
+      "audioLink": "../assets/audio/drum/musical_human_beatbox_open_hi_hat.mp3"
+    },
+    {
+      "id": 3,
+      "instrument": "drum",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "snare",
+      "state": "off",
+      "keyboard": "f",
+      "audioLink": "../assets/audio/drum/musical_human_beatbox_snare_drum.mp3"
+    }
+  ]
+
+}

@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { XylophonerComponent} from './components/xylophone/xylophone.component';
+import { DrumComponent} from './components/drum/drum.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'accordion', component: AccordionComponent },
   { path: 'xylophone', component: XylophonerComponent },
+  { path: 'drum', component: DrumComponent },
   {
     path: '',
     redirectTo: '/accordion',
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
     AppComponent,
     AccordionComponent,
     XylophonerComponent,
+    DrumComponent,
     HeaderComponent,
     FooterComponent
   ],

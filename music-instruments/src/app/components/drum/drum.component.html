@@ -1,0 +1,18 @@
+<div class='main'>
+  <div class="drum-container">
+    <ul>
+      <li class="drum-key" *ngFor="let drumKey of drumKeys; let i = index">
+        <div class="key" [ngClass]="{'drum-class': drumKey.class == drum-class}"
+         (click)="playNote(i)" [@onOffTrigger]="drumKey.state">
+          <div class="screw">
+
+          </div>
+          <div class="screw">
+
+          </div>
+        </div>
+        {{drumKey.keyboard.toUpperCase()}}
+      </li>
+    </ul>
+  </div>
+</div>
