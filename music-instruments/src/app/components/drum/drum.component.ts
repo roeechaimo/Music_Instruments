@@ -1,5 +1,6 @@
 import { OnInit } from '@angular/core';
 import { GetJson } from '../../services/GetJson.service';
+import { KeyBoardKey } from '../../services/KeyBoardKey.service';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
@@ -16,19 +17,20 @@ export class DrumComponent implements OnInit {
   drumKeys = [];
   triggerStateName: string;
 
-  constructor(private _getJson: GetJson) { }
+  constructor(private _getJson: GetJson, private _keyBoardKey: KeyBoardKey) { }
 
   @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
-    this.keyboardKey = event.key;
-    let keyExists = this.drumKeys.filter(drumKey => {
-      return this.keyboardKey === drumKey.keyboard;
-    });
-    if (keyExists.length !== 0) {
-      this.playNote(keyExists[0].id);
-    } else {
-      return false;
-    }
+  setKeyboardKeys() {
+    let activate = this._keyBoardKey.activate(this.drumKeys);
+    // this.keyboardKey = event.key;
+    // let keyExists = this.drumKeys.filter(drumKey => {
+    //   return this.keyboardKey === drumKey.keyboard;
+    // });
+    // if (keyExists.length !== 0) {
+    //   this.playNote(keyExists[0].id);
+    // } else {
+    //   return false;
+    // }
   }
 
   playNote(index) {
@@ -55,6 +57,7 @@ export class DrumComponent implements OnInit {
     this._getJson.getDataFromJson("drum").then((res) => {
       drumKeys = res;
       this.drumKeys = drumKeys["drum-keys"];
+      this.setKeyboardKeys();
     });
   }
 

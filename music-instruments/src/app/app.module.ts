@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { GetJson } from './services/GetJson.service';
+import { KeyBoardKey } from './services/KeyBoardKey.service';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,14 +37,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpModule,    
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
     ),
     BrowserAnimationsModule
   ],
-  providers: [GetJson],
+  providers: [GetJson, KeyBoardKey],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
