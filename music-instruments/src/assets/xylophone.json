@@ -1,0 +1,48 @@
+{
+  "xylophone-keys": [{
+      "id": 0,
+      "instrument": "xylophone",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "",
+      "state": "off",
+      "keyboard": "a",
+      "audioLink": "../assets/audio/xylophone/16275_1460570774.mp3"
+    },
+    {
+      "id": 1,
+      "instrument": "xylophone",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "",
+      "state": "off",
+      "keyboard": "s",
+      "audioLink": "../assets/audio/xylophone/16296_1460570779.mp3"
+    },
+    {
+      "id": 2,
+      "instrument": "xylophone",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "",
+      "state": "off",
+      "keyboard": "d",
+      "audioLink": "../assets/audio/xylophone/16297_1460570779.mp3"
+    },
+    {
+      "id": 3,
+      "instrument": "xylophone",
+      "height": "",
+      "width": "",
+      "color": "#F8F8FF",
+      "class": "",
+      "state": "off",
+      "keyboard": "f",
+      "audioLink": "../assets/audio/xylophone/16298_1460570779.mp3"
+    }
+  ]
+
+}

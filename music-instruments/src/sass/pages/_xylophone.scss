@@ -1,0 +1,21 @@
+.xylophone-container {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      text-align: center;
+      font-size: $text-size-key;
+
+      .key {
+        @include hover-instrument;
+        border: 1px solid $key-border-color;
+        box-shadow: 0.5vh 0.5vh 0.2vh $shadow;
+        height: 30vh;
+        width: 8vh;
+        background-color: $key-color-big;
+      }
+    }
+  }
+}
