@@ -2,8 +2,9 @@
   <div class="drum-container">
     <ul>
       <li class="drum-key" *ngFor="let drumKey of drumKeys; let i = index">
-        <div class="key" [ngClass]="{'drum-class': drumKey.class == drum-class}"
-         (click)="playNote(i)" [@onOffTrigger]="drumKey.state">
+        <div class="key" [ngClass]="{'kick': drumKey.class === 'kick', 'closed-hi-hat': drumKey.class === 'closed-hi-hat',
+       'open-hi-hat': drumKey.class === 'open-hi-hat', 'snare': drumKey.class === 'snare'}"
+       (click)="playNote(i)" [@onOffTrigger]="drumKey.state">
           <div class="screw">
 
           </div>
