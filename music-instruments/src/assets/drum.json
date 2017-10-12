@@ -15,8 +15,8 @@
       "instrument": "drum",
       "height": "",
       "width": "",
-      "color": "#ffffcc",
-      "class": "closed-hi-hat",
+      "color": "#FFFFCC",
+      "class": "closed-hi-hat needsScrew",
       "state": "off",
       "keyboard": "s",
       "audioLink": "../assets/audio/drum/musical_human_beatbox_closed_hi_hat.mp3"
@@ -26,8 +26,8 @@
       "instrument": "drum",
       "height": "",
       "width": "",
-      "color": "#F8F8FF",
-      "class": "open-hi-hat",
+      "color": "#FFFFCC",
+      "class": "open-hi-hat needsScrew",
       "state": "off",
       "keyboard": "d",
       "audioLink": "../assets/audio/drum/musical_human_beatbox_open_hi_hat.mp3"
