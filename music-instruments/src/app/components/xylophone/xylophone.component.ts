@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { GetJson } from '../../services/GetJson.service';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
@@ -15,7 +15,7 @@ export class XylophonerComponent implements OnInit {
   keyboardKey;
   triggerStateName: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private _getJson: GetJson) { }
 
   xylophoneKeys = [];
 
@@ -39,10 +39,11 @@ export class XylophonerComponent implements OnInit {
     this.audio.play();
   }
 
-  ngOnInit(): void {
-    this.http.get('../../assets/xylophone.json').subscribe(data => {
-      this.results = data['xylophone-keys'];
-      this.xylophoneKeys = this.results;
+  ngOnInit() {
+    let xylophoneKeys;
+    this._getJson.getDataFromJson("xylophone").then((res) => {
+      xylophoneKeys = res;
+      this.xylophoneKeys = xylophoneKeys["xylophone-keys"];
     });
   }
 }

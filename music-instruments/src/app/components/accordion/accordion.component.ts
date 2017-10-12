@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { GetJson } from '../../services/GetJson.service';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
@@ -17,7 +17,7 @@ export class AccordionComponent implements OnInit {
   keyboardKey;
   triggerStateName: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private _getJson: GetJson) { }
 
   accordionKeys = [];
 
@@ -45,10 +45,11 @@ export class AccordionComponent implements OnInit {
     return this.accordionKeys[index].class;
   }
 
-  ngOnInit(): void {
-    this.http.get('../../assets/accordion.json').subscribe(data => {
-      this.results = data['accordion-keys'];
-      this.accordionKeys = this.results;
+  ngOnInit() {
+    let accordionKeys;
+    this._getJson.getDataFromJson("accordion").then((res) => {
+      accordionKeys = res;
+      this.accordionKeys = accordionKeys["accordion-keys"];
     });
   }
 }

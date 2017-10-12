@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { GetJson } from '../../services/GetJson.service';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
@@ -12,12 +12,11 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
 export class DrumComponent implements OnInit {
   results;
   audio;
-  keyboardKey;  
+  keyboardKey;
+  drumKeys = [];
   triggerStateName: string;
 
-  constructor(private http: HttpClient) { }
-
-  drumKeys = [];
+  constructor(private _getJson: GetJson) { }
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
@@ -51,10 +50,12 @@ export class DrumComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.http.get('../../assets/drum.json').subscribe(data => {
-      this.results = data['drum-keys'];
-      this.drumKeys = this.results;
+  ngOnInit() {
+    let drumKeys;
+    this._getJson.getDataFromJson("drum").then((res) => {
+      drumKeys = res;
+      this.drumKeys = drumKeys["drum-keys"];
     });
   }
+
 }

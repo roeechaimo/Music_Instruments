@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
+import { GetJson } from './services/GetJson.service';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,14 +36,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpModule,    
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
     ),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GetJson],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
