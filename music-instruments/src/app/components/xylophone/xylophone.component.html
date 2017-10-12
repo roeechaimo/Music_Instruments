@@ -3,7 +3,12 @@
     <ul>
       <li class="xylophone-key" *ngFor="let xylophoneKey of xylophoneKeys; let i = index">
         <div class="key" (click)="playNote(i)" [@onOffTrigger]="xylophoneKey.state">
+          <div class="screw">
 
+          </div>
+          <div class="screw">
+
+          </div>
         </div>
         {{xylophoneKey.keyboard.toUpperCase()}}
       </li>
