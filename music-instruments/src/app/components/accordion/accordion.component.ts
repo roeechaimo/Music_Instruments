@@ -22,7 +22,7 @@ export class AccordionComponent implements OnInit {
   accordionKeys = [];
 
   @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {    
+  handleKeyboardEvent(event: KeyboardEvent) {
     this.keyboardKey = event.key;
     let keyExists = this.accordionKeys.filter(accordionKey => {
       return this.keyboardKey === accordionKey.keyboard;
@@ -39,6 +39,10 @@ export class AccordionComponent implements OnInit {
     this.audio = new Audio();
     this.audio.src = this.accordionKeys[index].audioLink;
     this.audio.play();
+  }
+
+  getClass(index) {
+    return this.accordionKeys[index].class;
   }
 
   ngOnInit(): void {

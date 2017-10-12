@@ -2,8 +2,7 @@
   <div class="accordion-container">
     <ul>
       <li class="accordion-key" *ngFor="let accordionKey of accordionKeys; let i = index">
-        <div class="key" [ngClass]="{'big': accordionKey.class === 'big', 'small': accordionKey.class === 'small'}"
-         (click)="playNote(i)" [@onOffTrigger]="accordionKey.state">
+        <div class="key" [ngClass]="getClass(i)" (click)="playNote(i)" [@onOffTrigger]="accordionKey.state">
 
         </div>
         {{accordionKey.keyboard.toUpperCase()}}

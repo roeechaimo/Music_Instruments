@@ -7,14 +7,14 @@
     li {
       text-align: center;
       font-size: $text-size-key;
-      margin: 1vh;
+      margin: 2vh;
 
       .key {
         @include hover-instrument;
         border: 1px solid $key-border-color;
         border-radius: 50%;
         box-shadow: 0.5vh 0.5vh 0.2vh $shadow;
-        display: flex;        
+        display: flex;
         justify-content: space-around;
         align-items: center;
 
@@ -28,12 +28,23 @@
           justify-content: center;
           align-items: center;
 
-          .screw {
+          .second-inner-border {
             border: 1px solid $key-border-color;
-            height: 1vh;
-            width: 1vh;
+            height: 25%;
+            width: 25%;
             border-radius: 50%;
-            background-color: $key-border-color;
+            box-shadow: 0.2vh 0.2vh 0.1vh $shadow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .screw {
+              border: 1px solid $key-border-color;
+              height: 1vh;
+              width: 1vh;
+              border-radius: 50%;
+              background-color: $key-border-color;
+            }
           }
         }
       }

@@ -12,7 +12,7 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
 export class DrumComponent implements OnInit {
   results;
   audio;
-  keyboardKey;
+  keyboardKey;  
   triggerStateName: string;
 
   constructor(private http: HttpClient) { }
@@ -37,6 +37,18 @@ export class DrumComponent implements OnInit {
     this.audio = new Audio();
     this.audio.src = this.drumKeys[index].audioLink;
     this.audio.play();
+  }
+
+  getClass(index) {
+    return this.drumKeys[index].class;
+  }
+
+  checkIfClassExists(index, cls) {
+    if (this.drumKeys[index].class.indexOf(cls) > -1) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   ngOnInit(): void {
