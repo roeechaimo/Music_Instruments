@@ -3,6 +3,7 @@ import { GetJson } from '../../services/GetJson.service';
 import { Component } from '@angular/core';
 import { PlayNote } from '../../services/PlayNote.service';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
+import { InstructionsComponent } from '../instructions/instructions.component';
 
 @Component({
   selector: 'app-xylophone',
@@ -11,7 +12,7 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
 })
 export class XylophonerComponent implements OnInit {
 
-  results;  
+  results;
   triggerStateName: string;
 
   constructor(private _getJson: GetJson, private _playNote: PlayNote) { }

@@ -3,6 +3,7 @@ import { GetJson } from '../../services/GetJson.service';
 import { PlayNote } from '../../services/PlayNote.service';
 import { Component } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
+import { InstructionsComponent } from '../instructions/instructions.component';
 
 @Component({
   selector: 'app-drum',
@@ -10,7 +11,7 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
   animations: [ON_OFF_ANIMATION]
 })
 export class DrumComponent implements OnInit {
-   
+
   drumKeys = [];
   triggerStateName: string;
 

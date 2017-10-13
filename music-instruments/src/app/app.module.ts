@@ -14,6 +14,7 @@ import { XylophonerComponent} from './components/xylophone/xylophone.component';
 import { DrumComponent} from './components/drum/drum.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InstructionsComponent } from './components/instructions/instructions.component';
 
 const appRoutes: Routes = [
   { path: 'accordion', component: AccordionComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     XylophonerComponent,
     DrumComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
