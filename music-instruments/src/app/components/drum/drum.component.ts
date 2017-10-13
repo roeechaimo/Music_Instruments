@@ -20,8 +20,14 @@ export class DrumComponent implements OnInit {
   constructor(private _getJson: GetJson, private _keyBoardKey: KeyBoardKey) { }
 
   @HostListener('document:keypress', ['$event'])
-  setKeyboardKeys() {
+  setKeyboardKeys() {    
     let activate = this._keyBoardKey.activate(this.drumKeys);
+    if(activate){
+      console.log(activate);
+      // this.playNote(this.drumKeys[activate]);
+    } else{
+      return false;
+    }
     // this.keyboardKey = event.key;
     // let keyExists = this.drumKeys.filter(drumKey => {
     //   return this.keyboardKey === drumKey.keyboard;

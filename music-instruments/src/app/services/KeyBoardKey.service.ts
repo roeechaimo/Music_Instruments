@@ -12,19 +12,23 @@ export class KeyBoardKey {
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
+    debugger;
     this.keyboardKey = event.key;
     let keyExists = this.requestedArray.filter(key => {
       return this.keyboardKey === key.keyboard;
     });
     if (keyExists.length !== 0) {
-      return true;
+      return keyExists[0].id;
     } else {
       return false;
     }
   }
 
   activate(array){
+    debugger;
     this.requestedArray = array;
+    let event = document.createEvent('KeyboardEvent');
+    this.handleKeyboardEvent(event);
   }
 
 }
