@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { GetJson } from '../../services/GetJson.service';
 import { Component } from '@angular/core';
-import { HostListener } from '@angular/core';
+import { PlayNote } from '../../services/PlayNote.service';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
 
 @Component({
@@ -10,33 +10,25 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
   animations: [ON_OFF_ANIMATION]
 })
 export class XylophonerComponent implements OnInit {
-  results;
-  audio;
-  keyboardKey;
+
+  results;  
   triggerStateName: string;
 
-  constructor(private _getJson: GetJson) { }
+  constructor(private _getJson: GetJson, private _playNote: PlayNote) { }
 
   xylophoneKeys = [];
 
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
-    this.keyboardKey = event.key;
-    let keyExists = this.xylophoneKeys.filter(xylophoneKey => {
-      return this.keyboardKey === xylophoneKey.keyboard;
-    });
-    if (keyExists.length !== 0) {
-      this.playNote(keyExists[0].id);
+  setKeyboardKeys() {
+    let activate = this._playNote.activate(this.xylophoneKeys);
+    if (activate) {
+      console.log(activate);
     } else {
       return false;
     }
   }
 
   playNote(index) {
-    this.xylophoneKeys[index].state = this.xylophoneKeys[index].state === 'on' ? 'off' : 'on';
-    this.audio = new Audio();
-    this.audio.src = this.xylophoneKeys[index].audioLink;
-    this.audio.play();
+    this._playNote.playNote(index);
   }
 
   ngOnInit() {
@@ -44,6 +36,7 @@ export class XylophonerComponent implements OnInit {
     this._getJson.getDataFromJson("xylophone").then((res) => {
       xylophoneKeys = res;
       this.xylophoneKeys = xylophoneKeys["xylophone-keys"];
+      this.setKeyboardKeys();
     });
   }
 }

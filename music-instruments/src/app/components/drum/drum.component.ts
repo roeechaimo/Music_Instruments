@@ -1,8 +1,7 @@
 import { OnInit } from '@angular/core';
 import { GetJson } from '../../services/GetJson.service';
-import { KeyBoardKey } from '../../services/KeyBoardKey.service';
+import { PlayNote } from '../../services/PlayNote.service';
 import { Component } from '@angular/core';
-import { HostListener } from '@angular/core';
 import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
 
 @Component({
@@ -11,39 +10,23 @@ import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
   animations: [ON_OFF_ANIMATION]
 })
 export class DrumComponent implements OnInit {
-  results;
-  audio;
-  keyboardKey;
+   
   drumKeys = [];
   triggerStateName: string;
 
-  constructor(private _getJson: GetJson, private _keyBoardKey: KeyBoardKey) { }
+  constructor(private _getJson: GetJson, private _playNote: PlayNote) { }
 
-  @HostListener('document:keypress', ['$event'])
-  setKeyboardKeys() {    
-    let activate = this._keyBoardKey.activate(this.drumKeys);
-    if(activate){
+  setKeyboardKeys() {
+    let activate = this._playNote.activate(this.drumKeys);
+    if (activate) {
       console.log(activate);
-      // this.playNote(this.drumKeys[activate]);
-    } else{
+    } else {
       return false;
     }
-    // this.keyboardKey = event.key;
-    // let keyExists = this.drumKeys.filter(drumKey => {
-    //   return this.keyboardKey === drumKey.keyboard;
-    // });
-    // if (keyExists.length !== 0) {
-    //   this.playNote(keyExists[0].id);
-    // } else {
-    //   return false;
-    // }
   }
 
   playNote(index) {
-    this.drumKeys[index].state = this.drumKeys[index].state === 'on' ? 'off' : 'on';
-    this.audio = new Audio();
-    this.audio.src = this.drumKeys[index].audioLink;
-    this.audio.play();
+    this._playNote.playNote(index);
   }
 
   getClass(index) {
