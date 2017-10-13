@@ -12,6 +12,7 @@ import { InstructionsComponent } from '../instructions/instructions.component';
 })
 export class DrumComponent implements OnInit {
 
+  url = '../../assets/';
   drumKeys = [];
   triggerStateName: string;
 
@@ -44,7 +45,7 @@ export class DrumComponent implements OnInit {
 
   ngOnInit() {
     let drumKeys;
-    this._getJson.getDataFromJson("drum").then((res) => {
+    this._getJson.getDataFromJson(this.url + "drum.json").then((res) => {
       drumKeys = res;
       this.drumKeys = drumKeys["drum-keys"];
       this.setKeyboardKeys();

@@ -13,6 +13,7 @@ import { InstructionsComponent } from '../instructions/instructions.component';
 
 export class AccordionComponent implements OnInit {
 
+  url = '../../assets/';
   triggerStateName: string;
 
   constructor(private _getJson: GetJson, private _playNote: PlayNote) { }
@@ -38,7 +39,7 @@ export class AccordionComponent implements OnInit {
 
   ngOnInit() {
     let accordionKeys;
-    this._getJson.getDataFromJson("accordion").then((res) => {
+    this._getJson.getDataFromJson(this.url + "accordion.json").then((res) => {
       accordionKeys = res;
       this.accordionKeys = accordionKeys["accordion-keys"];
       this.setKeyboardKeys();

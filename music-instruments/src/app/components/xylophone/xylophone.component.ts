@@ -12,7 +12,7 @@ import { InstructionsComponent } from '../instructions/instructions.component';
 })
 export class XylophonerComponent implements OnInit {
 
-  results;
+  url = '../../assets/';
   triggerStateName: string;
 
   constructor(private _getJson: GetJson, private _playNote: PlayNote) { }
@@ -34,7 +34,7 @@ export class XylophonerComponent implements OnInit {
 
   ngOnInit() {
     let xylophoneKeys;
-    this._getJson.getDataFromJson("xylophone").then((res) => {
+    this._getJson.getDataFromJson(this.url + "xylophone.json").then((res) => {
       xylophoneKeys = res;
       this.xylophoneKeys = xylophoneKeys["xylophone-keys"];
       this.setKeyboardKeys();

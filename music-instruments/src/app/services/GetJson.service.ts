@@ -8,9 +8,9 @@ export class GetJson {
 
   constructor(private http: Http) { }
 
-  getDataFromJson(file) {
+  getDataFromJson(url) {
     return this.http
-      .get('../../assets/' + file + '.json')
+      .get(url)
       .toPromise()
       .then(this.extractData)
   }

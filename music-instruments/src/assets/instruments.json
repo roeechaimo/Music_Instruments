@@ -1,0 +1,16 @@
+{
+  "instruments": [{
+      "id": 0,
+      "instrument": "accordion"
+    },
+    {
+      "id": 1,
+      "instrument": "xylophone"
+    },
+    {
+      "id": 2,
+      "instrument": "drum"
+    }
+  ]
+
+}

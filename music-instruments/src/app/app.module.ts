@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { GetJson } from './services/GetJson.service';
+import { FormsModule } from '@angular/forms';
 import { PlayNote } from './services/PlayNote.service';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectionComponent } from './components/selection/selection.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { XylophonerComponent} from './components/xylophone/xylophone.component';
 import { DrumComponent} from './components/drum/drum.component';
@@ -20,9 +22,10 @@ const appRoutes: Routes = [
   { path: 'accordion', component: AccordionComponent },
   { path: 'xylophone', component: XylophonerComponent },
   { path: 'drum', component: DrumComponent },
+  { path: 'selection', component: SelectionComponent },
   {
     path: '',
-    redirectTo: '/accordion',
+    redirectTo: '/selection',
     pathMatch: 'full'
   }
 ];
@@ -30,6 +33,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    SelectionComponent,
     AccordionComponent,
     XylophonerComponent,
     DrumComponent,
@@ -40,6 +44,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
