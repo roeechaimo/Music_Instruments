@@ -1,16 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable()
-
 export class PlayNote {
-
-  constructor() { }
+  constructor() {}
 
   audio;
   keyboardKey;
   requestedArray;
 
-  handleKeyboardEvent(event: KeyboardEvent) {
+  handleKeyboardEvent(event: KeyboardEvent): boolean {
     this.keyboardKey = event.key;
     let keyExists = this.requestedArray.filter(key => {
       return this.keyboardKey === key.keyboard;
@@ -25,18 +23,18 @@ export class PlayNote {
 
   activate(array) {
     this.requestedArray = array;
-    document.addEventListener('keypress', (event) => {
-      this.handleKeyboardEvent(event);
-      return true;
+    document.addEventListener("keypress", event => {
+      return this.handleKeyboardEvent(event);
     });
 
+    return true;
   }
 
   playNote(index) {
-    this.requestedArray[index].state = this.requestedArray[index].state === 'on' ? 'off' : 'on';
+    this.requestedArray[index].state =
+      this.requestedArray[index].state === "on" ? "off" : "on";
     this.audio = new Audio();
     this.audio.src = this.requestedArray[index].audioLink;
     this.audio.play();
   }
-
 }

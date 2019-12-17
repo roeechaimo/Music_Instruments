@@ -1,27 +1,25 @@
-import { OnInit } from '@angular/core';
-import { GetJson } from '../../services/GetJson.service';
-import { Component } from '@angular/core';
-import { PlayNote } from '../../services/PlayNote.service';
-import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
-import { InstructionsComponent } from '../instructions/instructions.component';
+import { OnInit } from "@angular/core";
+import { GetJson } from "../../services/GetJson.service";
+import { Component } from "@angular/core";
+import { PlayNote } from "../../services/PlayNote.service";
+import { ON_OFF_ANIMATION } from "../../animations/on-off.animation";
+import { InstructionsComponent } from "../instructions/instructions.component";
 
 @Component({
-  selector: 'app-accordion',
-  templateUrl: 'accordion.component.html',
-  animations: [ ON_OFF_ANIMATION ]
+  selector: "app-accordion",
+  templateUrl: "accordion.component.html",
+  animations: [ON_OFF_ANIMATION]
 })
-
 export class AccordionComponent implements OnInit {
-
-  url = '../../assets/';
+  url = "../../assets/";
   triggerStateName: string;
 
-  constructor(private _getJson: GetJson, private _playNote: PlayNote) { }
+  constructor(private _getJson: GetJson, private _playNote: PlayNote) {}
 
   accordionKeys = [];
 
   setKeyboardKeys() {
-    let activate = this._playNote.activate(this.accordionKeys);
+    let activate: boolean = this._playNote.activate(this.accordionKeys);
     if (activate) {
       console.log(activate);
     } else {
@@ -39,7 +37,7 @@ export class AccordionComponent implements OnInit {
 
   ngOnInit() {
     let accordionKeys;
-    this._getJson.getDataFromJson(this.url + "accordion.json").then((res) => {
+    this._getJson.getDataFromJson(this.url + "accordion.json").then(res => {
       accordionKeys = res;
       this.accordionKeys = accordionKeys["accordion-keys"];
       this.setKeyboardKeys();
