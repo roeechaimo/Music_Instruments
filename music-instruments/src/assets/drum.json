@@ -1,5 +1,6 @@
 {
-  "drum-keys": [{
+  "drum-keys": [
+    {
       "id": 0,
       "instrument": "drum",
       "height": "",
@@ -32,7 +33,7 @@
       "class": "snare",
       "state": "off",
       "keyboard": "d",
-      "title": "Sanre",
+      "title": "Snare",
       "audioLink": "../assets/audio/drum/musical_human_beatbox_snare_drum.mp3"
     },
     {
@@ -47,7 +48,5 @@
       "title": "Hi Hat 2",
       "audioLink": "../assets/audio/drum/musical_human_beatbox_open_hi_hat.mp3"
     }
-
   ]
-
 }
