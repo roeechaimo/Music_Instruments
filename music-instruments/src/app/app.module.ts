@@ -1,32 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
-import { RouterLinkActive } from '@angular/router';
-import { GetJson } from './services/GetJson.service';
-import { FormsModule } from '@angular/forms';
-import { PlayNote } from './services/PlayNote.service';
-import { AppComponent } from './app.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SelectionComponent } from './components/selection/selection.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
-import { XylophonerComponent} from './components/xylophone/xylophone.component';
-import { DrumComponent} from './components/drum/drum.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { InstructionsComponent } from './components/instructions/instructions.component';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RouterModule, Routes } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { AccordionComponent } from "./components/accordion/accordion.component";
+import { DrumComponent } from "./components/drum/drum.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { InstructionsComponent } from "./components/instructions/instructions.component";
+import { SelectionComponent } from "./components/selection/selection.component";
+import { XylophonerComponent } from "./components/xylophone/xylophone.component";
+import { GetJson } from "./services/GetJson.service";
+import { PlayNote } from "./services/PlayNote.service";
 
 const appRoutes: Routes = [
-  { path: 'accordion', component: AccordionComponent },
-  { path: 'xylophone', component: XylophonerComponent },
-  { path: 'drum', component: DrumComponent },
-  { path: 'selection', component: SelectionComponent },
+  { path: "accordion", component: AccordionComponent },
+  { path: "xylophone", component: XylophonerComponent },
+  { path: "drum", component: DrumComponent },
+  { path: "selection", component: SelectionComponent },
   {
-    path: '',
-    redirectTo: '/selection',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "/selection",
+    pathMatch: "full"
   }
 ];
 
@@ -43,15 +40,12 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-    ),
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserAnimationsModule
   ],
   providers: [GetJson, PlayNote],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
