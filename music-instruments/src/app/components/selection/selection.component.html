@@ -1,14 +1,18 @@
-<div class='main'>
+<div class="main">
   <div>
     <h2>Which instrument would you like play first?</h2>
   </div>
   <div class="instrument-select">
     <select #selectedInstrument>
-      <option *ngFor="let instrument of instruments; let i = index" [attr.value]="instrument.instrument"
-      [attr.selected]="instrument.instrument === 'accordion' ? true : null">{{instrument.instrument}}</option>
+      <option
+        *ngFor="let instrument of instruments; let i = index"
+        [attr.value]="instrument.instrument"
+        [attr.selected]="instrument.instrument === 'accordion' ? true : null"
+        >{{ instrument.instrument }}</option
+      >
     </select>
   </div>
   <div class="button">
-    <button (click) = "navigateToInstrument(selectedInstrument.value)">Play</button>
+    <div (click)="navigateToInstrument(selectedInstrument.value)">Play</div>
   </div>
 </div>
