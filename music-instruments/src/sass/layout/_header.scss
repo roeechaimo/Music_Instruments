@@ -2,7 +2,6 @@ header {
   padding: 2vh;
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px ridge darkgrey;
 
   >div {
     padding-right: 1vw;
@@ -22,6 +21,6 @@ header {
 
   .active-link {
     border: 1px solid $active-link-color;
-    border-radius: 10%;
+    border-radius: 5%;
   }
 }
