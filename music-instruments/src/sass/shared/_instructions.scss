@@ -1,0 +1,17 @@
+@media only screen and (max-width: 600px) {
+  .instructions-container {
+    text-align: center;
+
+    h2 {
+      font-size: 1em;
+
+      >span {
+        display: none;
+      }
+    }
+
+    h2.subtitle {
+      display: none;
+    }
+  }
+}

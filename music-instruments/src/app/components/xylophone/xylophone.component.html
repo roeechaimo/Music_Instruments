@@ -1,17 +1,20 @@
-<div class='main'>
+<div class="main">
   <app-instructions></app-instructions>
   <div class="xylophone-container">
     <ul>
-      <li class="xylophone-key" *ngFor="let xylophoneKey of xylophoneKeys; let i = index">
-        <div class="key" (click)="playNote(i)" [@onOffTrigger]="xylophoneKey.state">
-          <div class="screw">
-
-          </div>
-          <div class="screw">
-
-          </div>
+      <li
+        class="xylophone-key"
+        *ngFor="let xylophoneKey of xylophoneKeys; let i = index"
+      >
+        <div
+          class="key"
+          (click)="playNote(i)"
+          [@onOffTrigger]="xylophoneKey.state"
+        >
+          <div class="screw"></div>
+          <div class="screw"></div>
         </div>
-        {{xylophoneKey.keyboard.toUpperCase()}}
+        <span>{{ xylophoneKey.keyboard.toUpperCase() }}</span>
       </li>
     </ul>
   </div>

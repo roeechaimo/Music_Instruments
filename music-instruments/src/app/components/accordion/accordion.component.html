@@ -1,12 +1,18 @@
-<div class='main'>
+<div class="main">
   <app-instructions></app-instructions>
   <div class="accordion-container">
     <ul>
-      <li class="accordion-key" *ngFor="let accordionKey of accordionKeys; let i = index">
-        <div class="key" [ngClass]="getClass(i)" (click)="playNote(i)" [@onOffTrigger]="accordionKey.state">
-
-        </div>
-        {{accordionKey.keyboard.toUpperCase()}}
+      <li
+        class="accordion-key"
+        *ngFor="let accordionKey of accordionKeys; let i = index"
+      >
+        <div
+          class="key"
+          [ngClass]="getClass(i)"
+          (click)="playNote(i)"
+          [@onOffTrigger]="accordionKey.state"
+        ></div>
+        <span>{{ accordionKey.keyboard.toUpperCase() }}</span>
       </li>
     </ul>
   </div>

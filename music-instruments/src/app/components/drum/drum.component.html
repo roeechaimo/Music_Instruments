@@ -1,20 +1,29 @@
-<div class='main'>
+<div class="main">
   <app-instructions></app-instructions>
   <div class="drum-container">
     <ul>
       <li class="drum-key" *ngFor="let drumKey of drumKeys; let i = index">
-        <span>{{drumKey.title}}</span>
-        <div class="key" [ngClass]="getClass(i)" (click)="playNote(i)" [@onOffTrigger]="drumKey.state"
-        [ngStyle]="{'background-color': drumKey.color}">
+        <span>{{ drumKey.title }}</span>
+        <div
+          class="key"
+          [ngClass]="getClass(i)"
+          (click)="playNote(i)"
+          [@onOffTrigger]="drumKey.state"
+          [ngStyle]="{ 'background-color': drumKey.color }"
+        >
           <div class="inner-border">
-            <div class="second-inner-border" *ngIf="checkIfClassExists(i, 'needsSecondInnerBorder')">
-              <div class="screw" *ngIf="checkIfClassExists(i, 'needsScrew')">
-
-              </div>
+            <div
+              class="second-inner-border"
+              *ngIf="checkIfClassExists(i, 'needsSecondInnerBorder')"
+            >
+              <div
+                class="screw"
+                *ngIf="checkIfClassExists(i, 'needsScrew')"
+              ></div>
             </div>
           </div>
         </div>
-        <span>{{drumKey.keyboard.toUpperCase()}}</span>
+        <span class="keyboard-key">{{ drumKey.keyboard.toUpperCase() }}</span>
       </li>
     </ul>
   </div>

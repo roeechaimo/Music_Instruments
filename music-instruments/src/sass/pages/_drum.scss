@@ -71,3 +71,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .drum-container {
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        span {
+          font-size: 0.8em;
+        }
+
+        span.keyboard-key {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -13,3 +13,9 @@
     box-shadow: 1.5px 1.5px $shadow;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .main>div:first-child {
+    text-align: center;
+  }
+}

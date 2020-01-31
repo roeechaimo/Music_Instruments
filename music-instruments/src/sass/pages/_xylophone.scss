@@ -32,3 +32,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .xylophone-container {
+    ul {
+      li {
+        >span {
+          display: none;
+        }
+      }
+    }
+  }
+}
